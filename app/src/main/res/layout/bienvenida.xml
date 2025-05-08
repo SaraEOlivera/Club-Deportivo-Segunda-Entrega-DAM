@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.297" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnIngresar"
         android:layout_width="211dp"
         android:layout_height="87dp"
         android:backgroundTint="#3d5da2"
