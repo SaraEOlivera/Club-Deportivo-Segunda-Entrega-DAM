@@ -9,10 +9,11 @@
     android:background="#ef8732">
 
     <TextView
+        android:id="@+id/tvBienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido al Club"
-        android:textSize="34sp"
+        android:text="@string/bienvenido_al_club"
+        android:textSize="@dimen/tx_grande"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,12 +24,15 @@
 
     <Button
         android:id="@+id/btnIniciarSesion"
-        android:layout_width="211dp"
-        android:layout_height="87dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/iniciar_sesi_n"
+        android:textSize="@dimen/tx_medio"
         android:backgroundTint="#3d5da2"
-        android:text="Iniciar Sesión"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="98dp"
-        tools:layout_editor_absoluteY="400dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvBienvenida"
+        app:layout_constraintTop_toBottomOf="parent"
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

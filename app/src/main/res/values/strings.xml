@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Segunda Entrega DAM</string>
+    <string name="bienvenido_al_club">Bienvenido al Club</string>
+    <string name="usuario">Usuario</string>
+    <string name="ingrese_su_usuario">Ingrese su usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="ingres_tu_contrase_a">Ingresá tu contraseña</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
 </resources>
