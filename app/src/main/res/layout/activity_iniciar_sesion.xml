@@ -64,12 +64,25 @@
         android:id="@+id/btnIniciarSesion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/ingresar"
+        android:text="@string/iniciar_sesi_n"
         android:textSize="@dimen/tx_medio"
         android:backgroundTint="#3d5da2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/editTextPassword" />
+
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3d5da2"
+        android:text="@string/registrarse"
+        android:textSize="@dimen/tx_medio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnIniciarSesion"
+        app:layout_marginTop="16dp"
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
