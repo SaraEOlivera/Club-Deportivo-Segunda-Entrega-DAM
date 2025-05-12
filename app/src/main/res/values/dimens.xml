@@ -3,4 +3,5 @@
     <dimen name="tx_chico">14sp</dimen>
     <dimen name="tx_medio">20sp</dimen>
     <dimen name="tx_grande">24sp</dimen>
+    <dimen name="tx_muy_grande">32sp</dimen>
 </resources>
