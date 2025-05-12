@@ -8,4 +8,7 @@
     <string name="ingresar">Ingresar</string>
     <string name="iniciar_sesi_n">Iniciar Sesión</string>
     <string name="registrarse">Registrarse</string>
+    <string name="repetir_contraseña">Repetir la contraseña</string>
+    <string name="crear_cuenta">Crear cuents </string>
+    <string name="confirmar">Confirmar </string>
 </resources>
