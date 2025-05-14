@@ -8,6 +8,17 @@
     android:background="#ef8732"
     tools:context=".Actividades">
 
+    <ImageView
+        android:id="@+id/logoPrincipal"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sport_logo_app"
+        app:tint="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"/>
+
     <TextView
         android:id="@+id/txtTitulo"
         android:layout_width="wrap_content"
@@ -15,10 +26,11 @@
         android:layout_marginTop="40dp"
         android:text="Actividades"
         android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/logoPrincipal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+       />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
