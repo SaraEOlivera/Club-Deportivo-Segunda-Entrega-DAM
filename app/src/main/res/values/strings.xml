@@ -17,4 +17,5 @@
     <string name="cuotas">Cuotas</string>
     <string name="seleccionar_cliente">Seleccionar Cliente</string>
     <string name="registrar_cliente">Registrar Cliente</string>
+    <string name="registro_cliente">Formulario de registro</string>
 </resources>

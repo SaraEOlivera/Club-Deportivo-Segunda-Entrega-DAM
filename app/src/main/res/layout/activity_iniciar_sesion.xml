@@ -37,6 +37,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:hint="@string/ingrese_su_usuario"
+        android:inputType = "text"
         android:backgroundTint="#3d5da2"
         app:layout_constraintTop_toBottomOf="@id/idNombreUsuario"
         app:layout_constraintStart_toStartOf="parent"
