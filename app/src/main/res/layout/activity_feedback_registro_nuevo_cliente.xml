@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#ef8732"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feedbackRegistroNuevoCliente">
+
+<!--Logo app-->
+    <ImageView
+        android:id="@+id/logoPrincipal"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sport_logo_app"
+        app:tint="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"/>
+
+    <TextView
+        android:id="@+id/txtNuevoClienteOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/tx_muy_grande"
+        android:textColor="@color/black"
+        android:text="@string/Registro_exitoso"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/logoPrincipal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp" />
+
+<!--    logo check-->
+    <ImageView
+        android:id="@+id/logoCheck"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/baseline_check_circle_outline_24"
+        app:tint="@color/blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtNuevoClienteOk"
+        android:layout_marginTop="48dp"/>
+
+
+    <Button
+        android:id="@+id/btnIrActividades"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#3d5da2"
+        android:text="@string/ir_a_actividades"
+        android:textSize="@dimen/tx_grande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoCheck"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
