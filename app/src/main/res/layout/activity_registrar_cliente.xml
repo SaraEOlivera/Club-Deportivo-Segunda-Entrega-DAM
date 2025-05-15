@@ -90,7 +90,7 @@
             android:id="@+id/EdTextDocumento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName" />
+            android:inputType="number" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!--    Fecha Nac-->
@@ -123,18 +123,32 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp"/>
-    
+
+    <!--   Btn Ficha Medica-->
+    <Button
+        android:id="@+id/adjuntarFichaMedica"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#3d5da2"
+        android:text="@string/fichaMedica"
+        android:textSize="@dimen/tx_medio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chkbEsSocio"/>
+
+    <!--   Btn Registrar-->
     <Button
         android:id="@+id/confirmarRegistroNuevo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#3d5da2"
         android:text="@string/confirmarnuevoregistro"
         android:textSize="@dimen/tx_medio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chkbEsSocio" />
+        app:layout_constraintTop_toBottomOf="@id/adjuntarFichaMedica" />
 
 
 

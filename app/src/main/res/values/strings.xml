@@ -24,4 +24,5 @@
     <string name="FechaNacimiento">Fecha de Nacimiento</string>
     <string name="es_socio">¿Es socio?</string>
     <string name="confirmarnuevoregistro">Confirmar registro</string>
+    <string name="fichaMedica">Adjuntar ficha</string>
 </resources>
