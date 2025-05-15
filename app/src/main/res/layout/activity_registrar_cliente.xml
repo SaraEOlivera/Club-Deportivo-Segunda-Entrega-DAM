@@ -21,15 +21,120 @@
 
     <TextView
         android:id="@+id/tvRegistroCliente"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/registro_cliente"
         android:textSize="@dimen/tx_grande"
         android:textStyle="bold"
         android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoPrincipal"/>
+
+
+<!--    Nombre-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        app:layout_constraintTop_toBottomOf="@id/tvRegistroCliente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logoPrincipal"/>
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EdTextNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    Apellido-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/apellido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Apellido"
+        app:layout_constraintTop_toBottomOf="@id/nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EdTextApellido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    DNI-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/documento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/Documento"
+        app:layout_constraintTop_toBottomOf="@id/apellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EdTextDocumento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    Fecha Nac-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fechaNac"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/FechaNacimiento"
+        app:layout_constraintTop_toBottomOf="@id/documento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/EdTextFechaNacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <CheckBox
+        android:id="@+id/chkbEsSocio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/es_socio"
+        android:textSize="@dimen/tx_medio"
+        app:layout_constraintTop_toBottomOf="@id/fechaNac"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"/>
+    
+    <Button
+        android:id="@+id/confirmarRegistroNuevo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#3d5da2"
+        android:text="@string/confirmarnuevoregistro"
+        android:textSize="@dimen/tx_medio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chkbEsSocio" />
 
 
 

@@ -18,4 +18,10 @@
     <string name="seleccionar_cliente">Seleccionar Cliente</string>
     <string name="registrar_cliente">Registrar Cliente</string>
     <string name="registro_cliente">Formulario de registro</string>
+    <string name="nombre">Nombre</string>
+    <string name="Apellido">Apellido</string>
+    <string name="Documento">Número de documento</string>
+    <string name="FechaNacimiento">Fecha de Nacimiento</string>
+    <string name="es_socio">¿Es socio?</string>
+    <string name="confirmarnuevoregistro">Confirmar registro</string>
 </resources>
