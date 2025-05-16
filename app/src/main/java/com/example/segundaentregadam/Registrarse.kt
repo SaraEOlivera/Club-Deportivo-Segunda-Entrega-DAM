@@ -17,7 +17,7 @@ class Registrarse : AppCompatActivity() {
         val btnConfirmar = findViewById<Button>(R.id.btnConfirmar)
 
         btnConfirmar.setOnClickListener(){
-            val intRegistrarsePrincipal = Intent(this,principal::class.java)
+            val intRegistrarsePrincipal = Intent(this,Feedback_Registro::class.java)
             startActivity(intRegistrarsePrincipal)
         }
 

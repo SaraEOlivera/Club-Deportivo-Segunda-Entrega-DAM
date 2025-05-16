@@ -15,6 +15,12 @@ class principal : AppCompatActivity() {
         setContentView(R.layout.activity_principal)
 
         val btnCerrarSesion = findViewById<Button>(R.id.btnCerrarSesion)
+        val btnActividades = findViewById<Button>(R.id.btnActividades)
+
+        btnActividades.setOnClickListener(){
+            val intPrincipalActividades = Intent(this, Actividades::class.java)
+            startActivity(intPrincipalActividades)
+        }
 
         btnCerrarSesion.setOnClickListener(){
             val intPrincipalBienvenida = Intent(this, MainActivity::class.java)

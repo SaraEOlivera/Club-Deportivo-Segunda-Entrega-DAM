@@ -36,7 +36,7 @@
 
 <!--    btnCuotas-->
     <Button
-        android:id="@+id/btnCuotas"
+        android:id="@+id/btnAbonarCuota"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -47,6 +47,19 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnActividades" />
+
+    <Button
+        android:id="@+id/btnPagarActividad"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#3d5da2"
+        android:text="@string/abonar_actividad"
+        android:textSize="@dimen/tx_grande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAbonarCuota" />
 
 <!--    btnSeleccionarCliente-->
     <Button
@@ -60,7 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCuotas" />
+        app:layout_constraintTop_toBottomOf="@id/btnPagarActividad" />
 
 <!--    btnRegistro de clientes-->
     <Button
