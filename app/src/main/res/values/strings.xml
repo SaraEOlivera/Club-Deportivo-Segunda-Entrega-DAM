@@ -28,4 +28,5 @@
     <string name="fichaMedica">Adjuntar ficha</string>
     <string name="ir_a_actividades">Ver las actividades</string>
     <string name="boton_volver_intentar">Volver a Intentar</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
 </resources>

@@ -20,7 +20,7 @@ class Registrarse : AppCompatActivity() {
             val intRegistrarsePrincipal = Intent(this,principal::class.java)
             startActivity(intRegistrarsePrincipal)
         }
-            
+
 
 
 

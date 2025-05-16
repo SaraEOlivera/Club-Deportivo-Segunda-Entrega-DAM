@@ -19,7 +19,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="48dp"/>
-    
+
+<!--    btnActividades-->
     <Button
         android:id="@+id/btnActividades"
         android:layout_width="0dp"
@@ -33,6 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoPrincipal" />
 
+<!--    btnCuotas-->
     <Button
         android:id="@+id/btnCuotas"
         android:layout_width="0dp"
@@ -46,6 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnActividades" />
 
+<!--    btnSeleccionarCliente-->
     <Button
         android:id="@+id/btnSeleccionarCliente"
         android:layout_width="0dp"
@@ -59,6 +62,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnCuotas" />
 
+<!--    btnRegistro de clientes-->
     <Button
         android:id="@+id/btnRegistrarCliente"
         android:layout_width="0dp"
@@ -71,6 +75,22 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnSeleccionarCliente" />
+
+<!--    btnAtras-->
+    <Button
+        android:id="@+id/btnCerrarSesion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#3d5da2"
+        android:text="@string/cerrar_sesion"
+        android:textSize="@dimen/tx_grande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRegistrarCliente" />
+
+
 
 
 
