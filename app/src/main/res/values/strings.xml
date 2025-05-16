@@ -31,4 +31,6 @@
     <string name="cerrar_sesion">Cerrar sesión</string>
     <string name="abonar_actividad">Abonar actividad</string>
     <string name="presento_ficha">¿Presentó ficha?</string>
+    <string name="error_nuevo_cliente">Registro de Nuevo Cliente erroneo</string>
+    <string name="error_login">Error al Iniciar Sesión</string>
 </resources>
