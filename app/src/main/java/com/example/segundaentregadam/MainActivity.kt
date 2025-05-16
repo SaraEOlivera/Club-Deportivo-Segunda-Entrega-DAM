@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val btnlogin = findViewById<Button>(R.id.btnIniciarSesion)
 
         btnlogin.setOnClickListener(){
-            val intentar = Intent(this, Login::class.java)
+            val intentar = Intent(this, Actividades::class.java)
             startActivity(intentar);
         }
     }
