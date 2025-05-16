@@ -16,7 +16,7 @@
     <string name="ir_a_la_pagina_principal">Página principal</string>
     <string name="actividades">Inscribir en Actividad</string>
     <string name="cuotas">Abonar Cuota</string>
-    <string name="seleccionar_cliente">Listar socios con cuota vencida</string>
+    <string name="seleccionar_cliente">Socios con cuota vencida</string>
     <string name="registrar_cliente">Registrar Cliente</string>
     <string name="registro_cliente">Formulario de registro</string>
     <string name="nombre">Nombre</string>
@@ -30,4 +30,5 @@
     <string name="boton_volver_intentar">Volver a Intentar</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
     <string name="abonar_actividad">Abonar actividad</string>
+    <string name="presento_ficha">¿Presentó ficha?</string>
 </resources>

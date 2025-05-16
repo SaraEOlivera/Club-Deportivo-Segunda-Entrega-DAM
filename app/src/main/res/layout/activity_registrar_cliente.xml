@@ -113,33 +113,36 @@
             android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/chkbEsSocio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/es_socio"
-        android:textSize="@dimen/tx_medio"
-        app:layout_constraintTop_toBottomOf="@id/fechaNac"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp"/>
-
-    <!--   Btn Ficha Medica-->
-    <Button
-        android:id="@+id/adjuntarFichaMedica"
+    <LinearLayout
+        android:id="@+id/contenedorCheckBoxes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="#3d5da2"
-        android:text="@string/fichaMedica"
-        android:textSize="@dimen/tx_medio"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chkbEsSocio"/>
+        app:layout_constraintTop_toBottomOf="@id/fechaNac">
 
-    <!--   Btn Registrar-->
+
+        <CheckBox
+            android:id="@+id/chkbEsSocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="@string/es_socio"
+            android:textSize="@dimen/tx_medio"/>
+
+
+        <CheckBox
+            android:id="@+id/chkbPresentoFicha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/presento_ficha"
+            android:textSize="@dimen/tx_medio" />
+
+    </LinearLayout>
+
     <Button
-        android:id="@+id/confirmarRegistroNuevo"
+        android:id="@+id/btnconfirmarRegistroNuevo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -148,10 +151,7 @@
         android:textSize="@dimen/tx_medio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/adjuntarFichaMedica" />
-
-
-
+        app:layout_constraintTop_toBottomOf="@id/contenedorCheckBoxes" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

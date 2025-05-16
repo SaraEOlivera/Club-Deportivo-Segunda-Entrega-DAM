@@ -16,11 +16,24 @@ class principal : AppCompatActivity() {
 
         val btnCerrarSesion = findViewById<Button>(R.id.btnCerrarSesion)
         val btnActividades = findViewById<Button>(R.id.btnActividades)
+        val btnAbonarCuota = findViewById<Button>(R.id.btnAbonarCuota)
+        val btnRegistrarCliente = findViewById<Button>(R.id.btnRegistrarCliente)
 
         btnActividades.setOnClickListener(){
             val intPrincipalActividades = Intent(this, Actividades::class.java)
             startActivity(intPrincipalActividades)
         }
+
+//        btnAbonarCuota.setOnClickListener(){
+//            val intPrincipalAbonarCuota = Intent(this, Abonar_cuota::class.java)
+//            startActivity(intPrincipalAbonarCuota)
+//        }
+
+        btnRegistrarCliente.setOnClickListener(){
+            val intPrincipalRegistroCliente = Intent(this, registrarCliente::class.java)
+            startActivity(intPrincipalRegistroCliente)
+        }
+
 
         btnCerrarSesion.setOnClickListener(){
             val intPrincipalBienvenida = Intent(this, MainActivity::class.java)

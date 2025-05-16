@@ -1,6 +1,8 @@
 package com.example.segundaentregadam
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,10 +13,13 @@ class registrarCliente : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_registrar_cliente)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+
+        val btnconfirmarRegistroNuevo = findViewById<Button>(R.id.btnconfirmarRegistroNuevo)
+
+        btnconfirmarRegistroNuevo.setOnClickListener(){
+            val intRegistrarClienteFeedback = Intent(this, feedbackRegistroNuevoCliente::class.java)
+            startActivity(intRegistrarClienteFeedback)
         }
     }
 }
