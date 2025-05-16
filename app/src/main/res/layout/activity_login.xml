@@ -71,9 +71,9 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="16dp" />
 
-
+<!--btn Login-->
     <Button
-        android:id="@+id/btnIniciarSesion"
+        android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/iniciar_sesi_n"
@@ -84,6 +84,7 @@
         app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/editTextPassword" />
 
+<!--    btn para registrarse-->
     <Button
         android:id="@+id/btnRegistrarse"
         android:layout_width="0dp"
@@ -93,7 +94,7 @@
         android:textSize="@dimen/tx_medio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnIniciarSesion"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
         android:layout_marginTop="16dp"/>
 
 

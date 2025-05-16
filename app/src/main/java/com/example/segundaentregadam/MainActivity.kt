@@ -13,10 +13,10 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.bienvenida)
 
-        val btnlogin = findViewById<Button>(R.id.btnIniciarSesion)
+        val btnIniciarSesion = findViewById<Button>(R.id.btnIniciarSesion)
 
-        btnlogin.setOnClickListener(){
-            val intentar = Intent(this, Actividades::class.java)
+        btnIniciarSesion.setOnClickListener(){
+            val intentar = Intent(this, Login::class.java)
             startActivity(intentar);
         }
     }
