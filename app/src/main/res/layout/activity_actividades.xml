@@ -5,100 +5,103 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ef8732"
+    android:background="@color/naranja"
     tools:context=".Actividades">
 
-    <Button
-        android:id="@+id/btnIrPrincipal2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="28dp"
-        android:backgroundTint="#3d5da2"
-        android:text="@string/ir_a_la_pagina_principal"
-        android:textSize="@dimen/tx_grande"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardActividades1" />
-
-    <ImageView
-        android:id="@+id/logoPrincipal"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/sport_logo_app"
-        app:tint="@color/blue"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="48dp"/>
-
-    <TextView
-        android:id="@+id/txtTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Actividades"
-        android:textSize="34sp"
-        app:layout_constraintTop_toBottomOf="@id/logoPrincipal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-       />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardActividades1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="8dp"
-        app:cardBackgroundColor="#ef7032"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/txvActividad"
+        <ImageView
+            android:id="@+id/logoPrincipal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/sport_logo_app"
+            app:tint="@color/blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="48dp"/>
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Actividades"
+            android:textSize="34sp"
+            app:layout_constraintTop_toBottomOf="@id/logoPrincipal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="142dp"
-            android:padding="12dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <TextView
-                android:id="@+id/txtActividad"
-                android:layout_width="wrap_content"
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardActividades1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="155dp"
-                android:layout_marginBottom="11dp"
-                android:text="Nombre de actividad"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txtTitulo2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/naranjaForCards">
 
-            <TextView
-                android:id="@+id/txtTitulo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="263dp"
-                android:layout_marginBottom="39dp"
-                android:text="Profesor: "
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtActividad" />
+                <LinearLayout
+                    android:layout_width="345dp"
+                    android:layout_height="147dp"
+                    android:orientation="vertical">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/txtActividad"
+                        android:layout_width="361dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="155dp"
+                        android:layout_marginBottom="11dp"
+                        android:text="Nombre de la actividad"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/txtTitulo2"
+                        android:layout_width="350dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="263dp"
+                        android:layout_marginBottom="39dp"
+                        android:text="Profesor: "
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                       />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnIrPrincipal2"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:backgroundTint="#3d5da2"
+            android:text="@string/ir_a_la_pagina_principal"
+            android:textSize="@dimen/tx_grande" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

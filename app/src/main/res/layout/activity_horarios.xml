@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naranja"
+    tools:context=".Horarios">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+
+    <ImageView
+        android:id="@+id/logoPrincipal"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sport_logo_app"
+        app:tint="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"/>
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Horarios"
+        android:textSize="34sp"
+        app:layout_constraintTop_toBottomOf="@id/logoPrincipal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardHorarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/naranjaForCards">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtListaDeHorarios"
+                        android:layout_width="350dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="263dp"
+                        android:layout_marginBottom="39dp"
+                        android:text="Aca habria una lista de horarios"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="390dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:backgroundTint="#3d5da2"
+            android:text="Volver a Actividades"
+            android:textSize="@dimen/tx_grande" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

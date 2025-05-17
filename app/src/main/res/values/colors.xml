@@ -3,5 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#3d5da2</color>
+    <color name="naranja">#ef8732</color>
+    <color name="naranjaForCards">#ef7032</color>
+
 
 </resources>
