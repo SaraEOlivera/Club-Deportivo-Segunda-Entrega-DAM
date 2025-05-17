@@ -21,5 +21,12 @@ class registrarCliente : AppCompatActivity() {
             val intRegistrarClienteFeedback = Intent(this, feedbackRegistroNuevoCliente::class.java)
             startActivity(intRegistrarClienteFeedback)
         }
+
+        val boton = findViewById<Button>(R.id.btnVolver)
+        boton.setOnClickListener {
+            val intento = Intent(this, principal::class.java)
+            startActivity(intento)
+        }
+
     }
 }

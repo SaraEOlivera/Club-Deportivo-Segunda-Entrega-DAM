@@ -47,12 +47,12 @@
 
 
     <Button
-        android:id="@+id/btnIrActividades"
+        android:id="@+id/btnVolver"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:backgroundTint="#3d5da2"
-        android:text="@string/ir_a_actividades"
+        android:text="Volver al Menú"
         android:textSize="@dimen/tx_grande"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -153,5 +153,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/contenedorCheckBoxes" />
 
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#3d5da2"
+        android:text="Volver al Menú"
+        android:textSize="@dimen/tx_medio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnconfirmarRegistroNuevo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

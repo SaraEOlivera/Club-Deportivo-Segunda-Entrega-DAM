@@ -27,9 +27,9 @@ class Horarios : AppCompatActivity() {
             startActivity(intento)
         }
 
-        val elegirActividad = findViewById<TextView>(R.id.txtListaDeHorarios)
-        elegirActividad.setOnClickListener {
-            val intento = Intent(this, Actividades::class.java)
+        val elegirHorario = findViewById<TextView>(R.id.txtListaDeHorarios)
+        elegirHorario.setOnClickListener {
+            val intento = Intent(this, Pago::class.java)
             startActivity(intento)
         }
     }

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SegundaEntregaDAM"
         tools:targetApi="31">
         <activity
+            android:name=".Pago"
+            android:exported="false" />
+        <activity
             android:name=".Horarios"
             android:exported="false" />
         <activity

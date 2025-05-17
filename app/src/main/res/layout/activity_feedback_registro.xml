@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/tx_muy_grande"
         android:textColor="@color/black"
-        android:text="@string/Registro_exitoso"
+        android:text="Registro o Pago exitoso"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/logoCheck"
         app:layout_constraintStart_toStartOf="parent"
