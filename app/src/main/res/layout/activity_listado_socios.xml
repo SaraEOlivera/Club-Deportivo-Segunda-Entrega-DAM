@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,20 +9,6 @@
     android:background="#ef8732"
     tools:context=".Actividades">
 
-    <Button
-        android:id="@+id/btnIrPrincipal2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="#3d5da2"
-        android:text="@string/ir_a_la_pagina_principal"
-        android:textSize="@dimen/tx_grande"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textRegistroOk" />
 
     <ImageView
         android:id="@+id/logoPrincipal"
@@ -46,193 +33,149 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoPrincipal" />
 
+<!--    Socio 1-->
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:id="@+id/cardSocio1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="8dp"
-        app:cardBackgroundColor="#ef7032"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#ef8732"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTitulo">
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txtActividad1Nombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_socio"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txtTitulo1Deuda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/Deuda"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@id/txtActividad1Nombre"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
-        android:layout_width="391dp"
-        android:layout_height="404dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="221dp">
+
+<!--    Socio 2-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSocio2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="#ef8732"
+        app:layout_constraintTop_toBottomOf="@id/cardSocio1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/txvActividad"
             android:layout_width="match_parent"
-            android:layout_height="119dp"
-            android:padding="12dp"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="220dp">
+            android:layout_height="wrap_content"
+            android:padding="16dp">
 
             <TextView
-                android:id="@+id/txtActividad"
+                android:id="@+id/txtActividad2Nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="155dp"
-                android:layout_marginBottom="11dp"
                 android:text="@string/nombre_socio"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txtTitulo2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/txtTitulo2"
+                android:id="@+id/txtTitulo2Deuda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="263dp"
-                android:layout_marginBottom="39dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/Deuda"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtActividad" />
+                app:layout_constraintTop_toBottomOf="@id/txtActividad2Nombre"
+                app:layout_constraintStart_toStartOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+<!--    socio 3-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSocio3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="#ef8732"
+        app:layout_constraintTop_toBottomOf="@id/cardSocio2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/txvActividad"
             android:layout_width="match_parent"
-            android:layout_height="112dp"
-            android:padding="12dp"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="220dp">
+            android:layout_height="wrap_content"
+            android:padding="16dp">
 
             <TextView
-                android:id="@+id/txtActividad"
+                android:id="@+id/txtActividad3Nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="155dp"
-                android:layout_marginBottom="11dp"
                 android:text="@string/nombre_socio"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txtTitulo2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/txtTitulo2"
+                android:id="@+id/txtTitulo3Deuda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="263dp"
-                android:layout_marginBottom="39dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/Deuda"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtActividad" />
+                app:layout_constraintTop_toBottomOf="@id/txtActividad3Nombre"
+                app:layout_constraintStart_toStartOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/txvActividad"
-            android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:padding="12dp"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="220dp">
+    <Button
+        android:id="@+id/btnvolverPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#3d5da2"
+        android:text="@string/ir_a_la_pagina_principal"
+        android:textSize="@dimen/tx_grande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardSocio3" />
+    
 
-            <TextView
-                android:id="@+id/txtActividad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="155dp"
-                android:layout_marginBottom="11dp"
-                android:text="@string/nombre_socio"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txtTitulo2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/txtTitulo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="263dp"
-                android:layout_marginBottom="39dp"
-                android:text="@string/Deuda"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtActividad" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/txvActividad"
-            android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:padding="12dp"
-            tools:layout_editor_absoluteX="3dp"
-            tools:layout_editor_absoluteY="220dp">
 
-            <TextView
-                android:id="@+id/txtActividad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="155dp"
-                android:layout_marginBottom="11dp"
-                android:text="@string/nombre_socio"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txtTitulo2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/txtTitulo2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="263dp"
-                android:layout_marginBottom="39dp"
-                android:text="@string/Deuda"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtActividad" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

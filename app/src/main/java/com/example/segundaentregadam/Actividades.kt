@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.content.Intent
+import android.widget.Button
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 
@@ -20,7 +21,7 @@ class Actividades : AppCompatActivity() {
             insets
         }
 
-        val boton = findViewById<ConstraintLayout>(R.id.txvActividad)
+        val boton = findViewById<Button>(R.id.btnIrPrincipal2)
         boton.setOnClickListener {
             val intento = Intent(this, principal::class.java)
             startActivity(intento)
