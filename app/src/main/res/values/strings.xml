@@ -43,4 +43,5 @@
     <string name="Pagar">Pagar</string>
     <string name="ver_horarios">Ver Horarios</string>
     <string name="pagar_actividad">Pagar Actividad</string>
+    <string name="registro_o_pago_exitoso">Registro o Pago exitoso</string>
 </resources>

@@ -19,7 +19,7 @@
             android:name=".Pago"
             android:exported="false" />
         <activity
-            android:name=".Horarios"
+            android:name=".ListadoSocios"
             android:exported="false" />
         <activity
             android:name=".feedbackRegistroNuevoCliente"
@@ -42,6 +42,9 @@
         <activity
             android:name=".Login"
             android:exported="false" />
+        <activity android:name=".Horarios"
+            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

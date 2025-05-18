@@ -18,6 +18,7 @@ class principal : AppCompatActivity() {
         val btnActividades = findViewById<Button>(R.id.btnActividades)
         val btnAbonarCuota = findViewById<Button>(R.id.btnAbonarCuota)
         val btnRegistrarCliente = findViewById<Button>(R.id.btnRegistrarCliente)
+        val btnSeleccionarCliente = findViewById<Button>(R.id.btnSeleccionarCliente)
 
         btnActividades.setOnClickListener(){
             val intPrincipalActividades = Intent(this, Actividades::class.java)
@@ -34,6 +35,10 @@ class principal : AppCompatActivity() {
             startActivity(intPrincipalRegistroCliente)
         }
 
+        btnSeleccionarCliente.setOnClickListener(){
+            val intPrincipalListadoSocios = Intent(this, ListadoSocios::class.java)
+            startActivity(intPrincipalListadoSocios)
+        }
 
         btnCerrarSesion.setOnClickListener(){
             val intPrincipalBienvenida = Intent(this, MainActivity::class.java)

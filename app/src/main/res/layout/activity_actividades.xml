@@ -94,14 +94,6 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnIrHorarios"
-            android:layout_width="390dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="28dp"
-            android:backgroundTint="#3d5da2"
-            android:text="@string/ver_horarios"
-            android:textSize="@dimen/tx_grande" />
 
         <Button
             android:id="@+id/btnIrPrincipal2"
