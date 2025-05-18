@@ -18,7 +18,7 @@ class Pago : AppCompatActivity() {
 
         val boton = findViewById<Button>(R.id.btnVolver)
         boton.setOnClickListener {
-            val intento = Intent(this, Horarios::class.java)
+            val intento = Intent(this, principal::class.java)
             startActivity(intento)
         }
 
