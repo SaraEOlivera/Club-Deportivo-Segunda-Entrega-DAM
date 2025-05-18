@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ef8732"
+    tools:context=".SeleccionarCliente">
+
+    <ImageView
+        android:id="@+id/logoPrincipal"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sport_logo_app"
+        app:tint="@color/blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"/>
+
+    <TextView
+        android:id="@+id/tvSeleccionarCliente"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/Seleccione_un_cliente"
+        android:textSize="@dimen/tx_grande"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoPrincipal"/>
+
+    <EditText
+        android:id="@+id/editDniSocio"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="@string/ingrese_DNi_socio"
+        android:inputType="number"
+        android:backgroundTint="#3d5da2"
+        app:layout_constraintTop_toBottomOf="@id/tvSeleccionarCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnBuscarSocio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#3d5da2"
+        android:text="@string/BuscarSocio"
+        android:textSize="@dimen/tx_medio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editDniSocio" />
+
+<!--    Info del socio-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardInfoSocio"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#ef8732"
+        app:layout_constraintTop_toBottomOf="@id/btnBuscarSocio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/txtDatosSocio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/datos_del_socio"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnIrAPagos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#3d5da2"
+        android:text="@string/Pagar"
+        android:textSize="@dimen/tx_medio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardInfoSocio" />
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,4 +36,9 @@
     <string name="Listado_Socios">Socios con deuda</string>
     <string name="nombre_socio">Nombre del socio: </string>
     <string name="Deuda">Deuda $:</string>
+    <string name="Seleccione_un_cliente">Seleccione un socio</string>
+    <string name="ingrese_DNi_socio">DNI del socio</string>
+    <string name="BuscarSocio">Buscar Socio</string>
+    <string name="datos_del_socio">Datos del socio:</string>
+    <string name="Pagar">Pagar</string>
 </resources>
