@@ -24,10 +24,10 @@ class principal : AppCompatActivity() {
             startActivity(intPrincipalActividades)
         }
 
-//        btnAbonarCuota.setOnClickListener(){
-//            val intPrincipalAbonarCuota = Intent(this, Abonar_cuota::class.java)
-//            startActivity(intPrincipalAbonarCuota)
-//        }
+        btnAbonarCuota.setOnClickListener(){
+            val intPrincipalSeleccionarCliente = Intent(this, SeleccionarCliente::class.java)
+            startActivity(intPrincipalSeleccionarCliente)
+        }
 
         btnRegistrarCliente.setOnClickListener(){
             val intPrincipalRegistroCliente = Intent(this, registrarCliente::class.java)

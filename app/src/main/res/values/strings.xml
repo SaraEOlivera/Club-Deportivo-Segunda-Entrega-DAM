@@ -41,4 +41,6 @@
     <string name="BuscarSocio">Buscar Socio</string>
     <string name="datos_del_socio">Datos del socio:</string>
     <string name="Pagar">Pagar</string>
+    <string name="ver_horarios">Ver Horarios</string>
+    <string name="pagar_actividad">Pagar Actividad</string>
 </resources>
