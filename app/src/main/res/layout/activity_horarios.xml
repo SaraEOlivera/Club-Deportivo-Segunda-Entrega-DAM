@@ -85,7 +85,7 @@
             android:layout_marginBottom="28dp"
             android:backgroundTint="#3d5da2"
             android:text="Volver a Actividades"
-            android:textSize="@dimen/tx_grande"
+            android:textSize="@dimen/tx_medio"
             />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

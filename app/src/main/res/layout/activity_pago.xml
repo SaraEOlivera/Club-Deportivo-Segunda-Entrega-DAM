@@ -66,7 +66,7 @@
                 android:layout_marginBottom="28dp"
                 android:backgroundTint="#3d5da2"
                 android:text="Pagar"
-                android:textSize="@dimen/tx_grande" />
+                android:textSize="@dimen/tx_medio"/>
 
             <Button
                 android:id="@+id/btnVolver"
@@ -75,7 +75,7 @@
                 android:layout_marginBottom="28dp"
                 android:backgroundTint="#3d5da2"
                 android:text="Cancelar"
-                android:textSize="@dimen/tx_grande" />
+                android:textSize="@dimen/tx_medio"/>
         </LinearLayout>
 
     </LinearLayout>

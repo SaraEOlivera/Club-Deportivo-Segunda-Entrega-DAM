@@ -40,7 +40,7 @@
         android:layout_marginBottom="128dp"
         android:backgroundTint="#3d5da2"
         android:text="@string/boton_volver_intentar"
-        android:textSize="@dimen/tx_grande"
+        android:textSize="@dimen/tx_medio"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

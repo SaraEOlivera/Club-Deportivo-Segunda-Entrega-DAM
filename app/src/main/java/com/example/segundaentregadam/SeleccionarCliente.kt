@@ -20,6 +20,11 @@ class SeleccionarCliente : AppCompatActivity() {
             val intSeleccionarSocioPago = Intent(this, Pago::class.java)
             startActivity(intSeleccionarSocioPago)
         }
+        val btnvolverPrincipal = findViewById<Button>(R.id.btnvolverPrincipal)
+        btnvolverPrincipal.setOnClickListener(){
+            val intListadoSociosMenuPrincipal = Intent(this, principal::class.java)
+            startActivity(intListadoSociosMenuPrincipal)
+        }
 
     }
 }
