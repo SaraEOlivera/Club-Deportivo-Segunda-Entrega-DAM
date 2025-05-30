@@ -25,6 +25,9 @@
             android:name=".feedbackRegistroNuevoCliente"
             android:exported="false" />
         <activity
+            android:name=".FeedbackLoginError"
+            android:exported="false" />
+        <activity
             android:name=".registrarCliente"
             android:exported="false" />
         <activity
