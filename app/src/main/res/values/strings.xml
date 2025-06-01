@@ -44,4 +44,6 @@
     <string name="ver_horarios">Ver Horarios</string>
     <string name="pagar_actividad">Pagar Actividad</string>
     <string name="registro_o_pago_exitoso">Registro o Pago exitoso</string>
+    <string name="Error_al_registrarse">Error al registrarse</string>
+    <string name="Volver_a_intentar">Volver a intentar</string>
 </resources>

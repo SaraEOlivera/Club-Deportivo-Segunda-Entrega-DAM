@@ -1,3 +1,6 @@
+package com.example.segundaentregadam
+
+import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -30,4 +33,17 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 1
         val existe =cursor.count > 0
         return  existe
     }
+
+    fun insertarAdmins(nombre:String, clave:String):Boolean{
+        val db = writableDatabase
+        val valores = ContentValues().apply {
+            put("nombre", nombre)
+            put("clave", clave)
+        }
+        val result = db.insert("usuarios", null, valores)
+        return result != -1L
+    }
+
+    //fun insertarSocios(){}
+
 }
