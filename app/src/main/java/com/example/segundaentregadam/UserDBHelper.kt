@@ -5,7 +5,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 1) {
+class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 2) {
     //onCreate
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("""
@@ -15,13 +15,27 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 1
                 clave TEXT
             )
         """.trimIndent())
-
+        db.execSQL("INSERT INTO usuarios(nombre, clave) VALUES ('a', 'a')")
         db.execSQL("INSERT INTO usuarios(nombre, clave) VALUES ('admin', '1234')")
         db.execSQL("INSERT INTO usuarios(nombre, clave) VALUES ('sara', 'sara2025')")
+
+        db.execSQL("""
+            CREATE TABLE actividades (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nombre TEXT UNIQUE,
+                profesor TEXT
+            )
+        """.trimIndent())
+        db.execSQL("INSERT INTO actividades(nombre, profesor) VALUES ('Futbol', 'Leo Messi')")
+        db.execSQL("INSERT INTO actividades(nombre, profesor) VALUES ('Basquet', 'Manu Ginobili')")
+
     }
     //onUpgrade
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("Not yet implemented")
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+
+        db.execSQL("DROP TABLE IF EXISTS usuarios")
+        db.execSQL("DROP TABLE IF EXISTS actividades")
+        onCreate(db)
     }
 
     fun login (nombre:String, clave:String):Boolean{
@@ -46,4 +60,51 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 1
 
     //fun insertarSocios(){}
 
+    fun obtenerActividades():List<String>{
+
+        val actividades = mutableListOf<String>()
+        val db = readableDatabase
+        val cursor = db.rawQuery(
+            "SELECT nombre, profesor FROM actividades",
+            null
+        )
+        if (cursor.moveToFirst()) {
+            do {
+                val actividad = cursor.getString(0)
+                val profesor = cursor.getString(1)
+                actividades.add("$actividad - $profesor")
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        return actividades
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

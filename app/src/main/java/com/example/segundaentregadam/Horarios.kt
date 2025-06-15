@@ -3,6 +3,7 @@ package com.example.segundaentregadam
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ListView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,10 +28,13 @@ class Horarios : AppCompatActivity() {
             startActivity(intento)
         }
 
-        val elegirHorario = findViewById<TextView>(R.id.txtListaDeHorarios)
+        """val elegirHorario = findViewById<ListView>(R.id.listHorarios)
         elegirHorario.setOnClickListener {
             val intento = Intent(this, Pago::class.java)
             startActivity(intento)
-        }
+        }"""
+
+        val actividad = intent.getStringExtra("Actividad")
+        findViewById<TextView>(R.id.txtTitulo2).text = "Funciona? $actividad"
     }
 }
