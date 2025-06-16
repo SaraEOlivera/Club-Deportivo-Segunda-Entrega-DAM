@@ -29,6 +29,9 @@
             android:name=".FeedbackRegistroError"
             android:exported="false" />
         <activity
+            android:name=".FeedbackRegistroNuevoClienteError"
+            android:exported="false" />
+        <activity
             android:name=".FeedbackLoginError"
             android:exported="false" />
         <activity

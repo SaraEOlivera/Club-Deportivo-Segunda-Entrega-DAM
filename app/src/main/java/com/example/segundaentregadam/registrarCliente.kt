@@ -27,14 +27,15 @@ class registrarCliente : AppCompatActivity() {
             val apellido = edtxApellido.text.toString().trim()
             val dni = edtxDni.text.toString().trim()
             val fechaNac = edtxFechaNac.text.toString().trim()
-            val intRegistrarClienteFeedback = Intent(this, feedbackRegistroNuevoCliente::class.java)
-            startActivity(intRegistrarClienteFeedback)
-            if (dbHelper.insertarSocios(nombre, apellido, dni, fecha)){
+
+
+            if (dbHelper.insertarSocios(nombre, apellido, dni, fechaNac)){
                 val intRegistroSocio = Intent(this, feedbackRegistroNuevoCliente::class.java)
                 startActivity(intRegistroSocio)
             }
             else{
-                val intentError = Intent(this)
+                val IntentError = Intent(this, FeedbackRegistroNuevoClienteError::class.java)
+                startActivity(IntentError)
             }
         }
 

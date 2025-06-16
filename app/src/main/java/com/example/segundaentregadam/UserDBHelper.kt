@@ -73,7 +73,7 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 2
         return result != -1L
     }
 
-    fun insertarSocios(nombre: String, apellido:String, dni:String, fechaNac:Date):Boolean{
+    fun insertarSocios(nombre: String, apellido:String, dni:String, fechaNac:String):Boolean{
         val db = writableDatabase
         val valores = ContentValues().apply {
             put("nombre", nombre)
