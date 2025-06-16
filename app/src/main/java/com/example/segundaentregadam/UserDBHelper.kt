@@ -4,9 +4,10 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import java.sql.Date
 
-class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 2) {
+class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 3) {
     //onCreate
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("""
@@ -35,13 +36,13 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 2
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nombre TEXT,
                 apellido TEXT,
-                dni TEXT UNIQUE,
-                fechaNac DATE
+                dni TEXT UNIQUE
+                --fechaNac DATE-->
             )
         """.trimIndent())
         db.execSQL("""
-            INSERT INTO socios(nombre, apellido, dni, fechaNac) VALUES (
-            'Juan', 'Perez', '77', '1975/05/05'
+            INSERT INTO socios(nombre, apellido, dni) VALUES (
+            'Juan', 'Perez', '77'
             )
         """.trimIndent())
     }
@@ -50,6 +51,7 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 2
 
         db.execSQL("DROP TABLE IF EXISTS usuarios")
         db.execSQL("DROP TABLE IF EXISTS actividades")
+        db.execSQL("DROP TABLE IF EXISTS socios")
         onCreate(db)
     }
 
@@ -73,13 +75,12 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 2
         return result != -1L
     }
 
-    fun insertarSocios(nombre: String, apellido:String, dni:String, fechaNac:String):Boolean{
+    fun insertarSocios(nombre: String, apellido:String, dni:String):Boolean{
         val db = writableDatabase
         val valores = ContentValues().apply {
             put("nombre", nombre)
             put("apellido", apellido)
             put("dni", dni)
-            put("fechaNac", fechaNac)
         }
         val result = db.insert("socios", null, valores)
         return  result != -1L

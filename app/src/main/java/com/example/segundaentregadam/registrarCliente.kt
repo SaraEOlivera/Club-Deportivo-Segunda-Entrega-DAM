@@ -19,17 +19,15 @@ class registrarCliente : AppCompatActivity() {
         val edtxNombre = findViewById<EditText>(R.id.EdTextNombre)
         val edtxApellido = findViewById<EditText>(R.id.EdTextApellido)
         val edtxDni = findViewById<EditText>(R.id.EdTextDocumento)
-        val edtxFechaNac = findViewById<EditText>(R.id.EdTextFechaNacimiento)
         val btnconfirmarRegistroNuevo = findViewById<Button>(R.id.btnconfirmarRegistroNuevo)
 
         btnconfirmarRegistroNuevo.setOnClickListener(){
             val nombre = edtxNombre.text.toString().trim()
             val apellido = edtxApellido.text.toString().trim()
             val dni = edtxDni.text.toString().trim()
-            val fechaNac = edtxFechaNac.text.toString().trim()
 
 
-            if (dbHelper.insertarSocios(nombre, apellido, dni, fechaNac)){
+            if (dbHelper.insertarSocios(nombre, apellido, dni)){
                 val intRegistroSocio = Intent(this, feedbackRegistroNuevoCliente::class.java)
                 startActivity(intRegistroSocio)
             }
@@ -37,6 +35,10 @@ class registrarCliente : AppCompatActivity() {
                 val IntentError = Intent(this, FeedbackRegistroNuevoClienteError::class.java)
                 startActivity(IntentError)
             }
+            edtxNombre.text.clear()
+            edtxApellido.text.clear()
+            edtxDni.text.clear()
+
         }
 
         val boton = findViewById<Button>(R.id.btnVolver)
