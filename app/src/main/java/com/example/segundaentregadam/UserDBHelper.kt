@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import java.sql.Date
 
 class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 2) {
     //onCreate
@@ -29,6 +30,20 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 2
         db.execSQL("INSERT INTO actividades(nombre, profesor) VALUES ('Futbol', 'Leo Messi')")
         db.execSQL("INSERT INTO actividades(nombre, profesor) VALUES ('Basquet', 'Manu Ginobili')")
 
+        db.execSQL("""
+            CREATE TABLE socios (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                nombre TEXT,
+                apellido TEXT,
+                dni TEXT UNIQUE,
+                fechaNac DATE
+            )
+        """.trimIndent())
+        db.execSQL("""
+            INSERT INTO socios(nombre, apellido, dni, fechaNac) VALUES (
+            'Juan', 'Perez', '77', '1975/05/05'
+            )
+        """.trimIndent())
     }
     //onUpgrade
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -58,7 +73,17 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 2
         return result != -1L
     }
 
-    //fun insertarSocios(){}
+    fun insertarSocios(nombre: String, apellido:String, dni:String, fechaNac:Date):Boolean{
+        val db = writableDatabase
+        val valores = ContentValues().apply {
+            put("nombre", nombre)
+            put("apellido", apellido)
+            put("dni", dni)
+            put("fechaNac", fechaNac)
+        }
+        val result = db.insert("socios", null, valores)
+        return  result != -1L
+    }
 
     fun obtenerActividades():List<String>{
 
