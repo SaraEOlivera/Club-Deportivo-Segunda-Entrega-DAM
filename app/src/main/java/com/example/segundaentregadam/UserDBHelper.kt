@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import java.sql.Date
 
-class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 3) {
+class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 4) {
     //onCreate
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("""
@@ -32,17 +32,24 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 3
         db.execSQL("INSERT INTO actividades(nombre, profesor) VALUES ('Basquet', 'Manu Ginobili')")
 
         db.execSQL("""
-            CREATE TABLE socios (
+            CREATE TABLE clientes (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 nombre TEXT,
                 apellido TEXT,
-                dni TEXT UNIQUE
+                dni TEXT UNIQUE,
+                esSocio Integer
                 --fechaNac DATE-->
             )
         """.trimIndent())
         db.execSQL("""
-            INSERT INTO socios(nombre, apellido, dni) VALUES (
-            'Juan', 'Perez', '77'
+            INSERT INTO clientes(nombre, apellido, dni, esSocio) VALUES (
+            'Juan', 'Perez', '77', 1
+            )
+        """.trimIndent())
+
+        db.execSQL("""
+            INSERT INTO clientes(nombre, apellido, dni, esSocio) VALUES (
+            'Juana', 'Perez', '25', 0
             )
         """.trimIndent())
     }
@@ -51,7 +58,7 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 3
 
         db.execSQL("DROP TABLE IF EXISTS usuarios")
         db.execSQL("DROP TABLE IF EXISTS actividades")
-        db.execSQL("DROP TABLE IF EXISTS socios")
+        db.execSQL("DROP TABLE IF EXISTS clientes")
         onCreate(db)
     }
 
@@ -75,14 +82,15 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 3
         return result != -1L
     }
 
-    fun insertarSocios(nombre: String, apellido:String, dni:String):Boolean{
+    fun insertarClientes(nombre: String, apellido:String, dni:String, esSocio:Boolean):Boolean{
         val db = writableDatabase
         val valores = ContentValues().apply {
             put("nombre", nombre)
             put("apellido", apellido)
             put("dni", dni)
+            put("esSocio", if (esSocio) 1 else 0)
         }
-        val result = db.insert("socios", null, valores)
+        val result = db.insert("clientes", null, valores)
         return  result != -1L
     }
 
