@@ -2,6 +2,7 @@ package com.example.segundaentregadam
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
@@ -112,7 +113,21 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 4
         cursor.close()
         return actividades
     }
+
+    fun obtenerSocio(dni: String):Cursor? {
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM clientes WHERE dni =? AND esSocio = 1", arrayOf(dni)
+        )
+        if (cursor.moveToFirst()){
+            return cursor
+        } else{
+            return null
+        }
+    }
+
+
 }
+
 
 
 
