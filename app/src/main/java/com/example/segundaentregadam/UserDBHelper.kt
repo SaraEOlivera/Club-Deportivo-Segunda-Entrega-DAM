@@ -114,9 +114,9 @@ class UserDBHelper(context: Context):SQLiteOpenHelper(context, "ClubDB", null, 4
         return actividades
     }
 
-    fun obtenerSocio(dni: String):Cursor? {
+    fun obtenerCliente(dni: String):Cursor? {
         val db = readableDatabase
-        val cursor = db.rawQuery("SELECT * FROM clientes WHERE dni =? AND esSocio = 1", arrayOf(dni)
+        val cursor = db.rawQuery("SELECT * FROM clientes WHERE dni =?", arrayOf(dni)
         )
         if (cursor.moveToFirst()){
             return cursor

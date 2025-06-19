@@ -31,13 +31,21 @@ class SeleccionarCliente : AppCompatActivity() {
        
         btnBuscarSocio.setOnClickListener(){
             val dni = editDNI.text.toString().trim()
-            val cursor = dbHelper.obtenerSocio(dni)
+            val cursor = dbHelper.obtenerCliente(dni)
             if(cursor != null){
                 val nombre= cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
                 val apellido= cursor.getString(cursor.getColumnIndexOrThrow("apellido"))
                 val dniSocio= cursor.getString(cursor.getColumnIndexOrThrow("dni"))
+                val esSocio = cursor.getInt(cursor.getColumnIndexOrThrow("esSocio")) == 1
 
-                val mostrarTexto = "Nombre: $nombre\n Apellido: $apellido \n DNI: $dniSocio"
+                val infoCliente = if(esSocio){
+                    "Socio"
+                } else {
+                    "No es un socio"
+                }
+
+                val mostrarTexto = "Nombre: $nombre\n Apellido: $apellido \n DNI: $dniSocio \n Estado: $infoCliente"
+
                 datosSocio.text = mostrarTexto
             } else {
                 Toast.makeText(this, "Socio inexistente", Toast.LENGTH_SHORT).show()
