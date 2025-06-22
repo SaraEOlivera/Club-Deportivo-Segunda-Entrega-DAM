@@ -10,172 +10,59 @@
     tools:context=".Actividades">
 
 
-    <ImageView
-        android:id="@+id/logoPrincipal"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/sport_logo_app"
-        app:tint="@color/blue"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="48dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
 
-    <TextView
-        android:id="@+id/txtTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/Listado_Socios"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logoPrincipal" />
+        <ImageView
+            android:id="@+id/logoPrincipal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/sport_logo_app"
+            app:tint="@color/blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="48dp"/>
 
-<!--    Socio 1-->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardSocio1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:cardBackgroundColor="#ef8732"
-        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Socios con deuda"
+            android:textSize="34sp"
+            app:layout_constraintTop_toBottomOf="@id/logoPrincipal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:padding="16dp">
 
-            <TextView
-                android:id="@+id/txtActividad1Nombre"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/nombre_socio"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+            <ListView
+                android:id="@+id/listaSocios"
+                android:layout_width="match_parent"
+                android:layout_height="308dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/naranjaForCards"/>
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/txtTitulo1Deuda"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/Deuda"
-                android:textSize="24sp"
-                app:layout_constraintTop_toBottomOf="@id/txtActividad1Nombre"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-
-<!--    Socio 2-->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardSocio2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:cardBackgroundColor="#ef8732"
-        app:layout_constraintTop_toBottomOf="@id/cardSocio1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="390dp"
             android:layout_height="wrap_content"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/txtActividad2Nombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nombre_socio"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-            <TextView
-                android:id="@+id/txtTitulo2Deuda"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/Deuda"
-                android:textSize="24sp"
-                app:layout_constraintTop_toBottomOf="@id/txtActividad2Nombre"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-<!--    socio 3-->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardSocio3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:cardBackgroundColor="#ef8732"
-        app:layout_constraintTop_toBottomOf="@id/cardSocio2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/txtActividad3Nombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nombre_socio"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-            <TextView
-                android:id="@+id/txtTitulo3Deuda"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/Deuda"
-                android:textSize="24sp"
-                app:layout_constraintTop_toBottomOf="@id/txtActividad3Nombre"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/btnvolverPrincipal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="#3d5da2"
-        android:text="@string/ir_a_la_pagina_principal"
-        android:textSize="@dimen/tx_medio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardSocio3" />
-    
-
-
-
-
-
-
-
-
-
+            android:layout_marginTop="15dp"
+            android:backgroundTint="#3d5da2"
+            android:text="Volver al Menú"
+            android:textSize="@dimen/tx_medio" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

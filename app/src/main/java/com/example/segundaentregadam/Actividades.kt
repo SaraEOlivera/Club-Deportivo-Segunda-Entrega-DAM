@@ -29,7 +29,7 @@ class Actividades : AppCompatActivity() {
         elegirActividad.setOnItemClickListener  { parent, view, position, id ->
             val actividadSeleccionada = parent.getItemAtPosition(position).toString()
             val intento = Intent(this, Horarios::class.java)
-            intento.putExtra("Actividad", actividadSeleccionada)
+            intento.putExtra("actividad", actividadSeleccionada)
             startActivity(intento)
         }
 
